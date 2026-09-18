@@ -1,0 +1,17 @@
+// ezC has no garbage collector.  This is an explicit libc allocation.
+extern fn malloc(size: usize) -> *u8;
+extern fn free(memory: *u8) -> void;
+
+fn main() -> i32 {
+    let raw = malloc(8);
+    let number: *i64 = cast[*i64](raw);
+    *number = 42;
+    let result = *number;
+    free(raw);
+
+    if result == 42 {
+        println("explicit malloc/free works");
+        return 0;
+    }
+    return 1;
+}

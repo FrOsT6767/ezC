@@ -1,0 +1,7 @@
+// A direct C ABI call.  The declaration is the only language-side glue.
+extern fn puts(text: *u8) -> i32;
+
+fn main() -> i32 {
+    puts("C library call from ezC");
+    return 0;
+}

@@ -1,0 +1,5 @@
+module demo.math;
+
+fn twice(value: i64) -> i64 {
+    return value + value;
+}

@@ -1,0 +1,10 @@
+fn main() -> i32 {
+    var values: [i64; 4] = [3, 5, 8, 13];
+    values[1] = values[0] + values[2];
+
+    if values[1] == 11 {
+        println("stack array indexing works");
+        return 0;
+    }
+    return 1;
+}

@@ -1,0 +1,10 @@
+module demo.main;
+use "math.ezc";
+
+fn main() -> i32 {
+    if twice(21) == 42 {
+        println("module import works");
+        return 0;
+    }
+    return 1;
+}

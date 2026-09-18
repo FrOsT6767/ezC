@@ -1,0 +1,10 @@
+enum Direction { Up, Right, Down, Left }
+
+fn main() -> i32 {
+    let facing = Direction.Right;
+    if facing == Direction.Right {
+        println("enum values are static integer tags");
+        return 0;
+    }
+    return 1;
+}

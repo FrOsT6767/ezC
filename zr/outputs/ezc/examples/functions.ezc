@@ -1,0 +1,12 @@
+fn multiply(a: i64, b: i64) -> i64 {
+    return a * b;
+}
+
+fn main() -> i32 {
+    let answer = multiply(6, 7);
+    if answer == 42 {
+        println("function call returned 42");
+        return 0;
+    }
+    return 1;
+}

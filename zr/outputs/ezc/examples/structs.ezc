@@ -1,0 +1,21 @@
+struct Player {
+    health: i64,
+    score: i64,
+}
+
+impl Player {
+    fn damage(self: *Player, amount: i64) -> i64 {
+        self.health = self.health - amount;
+        return self.health;
+    }
+}
+
+fn main() -> i32 {
+    var player = Player { health: 100, score: 0 };
+    let remaining = player.damage(35);
+    if remaining == 65 {
+        println("struct field and method work");
+        return 0;
+    }
+    return 1;
+}
